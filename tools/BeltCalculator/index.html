@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Belt Calculator (web)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root{--blue:#1565c0;--muted:#666}
+        body{font-family:Inter, Roboto, Arial, sans-serif;margin:0;background:#f4f6fb;color:#111}
+        main{max-width:1100px;margin:32px auto;background:#fff;padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(12,24,48,0.08)}
+        h1{color:var(--blue);margin:0 0 8px}
+        .row{display:flex;gap:12px;flex-wrap:wrap}
+        label{font-size:0.9rem;color:var(--muted)}
+        input,select{padding:6px 8px;border:1px solid #d6dbe8;border-radius:6px}
+        fieldset{border:1px solid #e6edf8;padding:12px;border-radius:8px;margin:8px 0}
+        table{width:100%;border-collapse:collapse;margin-top:12px}
+        th,td{padding:8px;border-bottom:1px solid #eef2fb;text-align:center;font-size:0.95rem}
+        th{background:#f8fbff;cursor:pointer}
+        .small{width:110px}
+        .btn{background:var(--blue);color:#fff;padding:8px 12px;border-radius:8px;border:none;cursor:pointer}
+        .muted{color:var(--muted)}
+        .link{color:var(--blue);text-decoration:none}
+        @media(max-width:700px){.row{flex-direction:column}}
+    </style>
+</head>
+<body>
+<main>
+    <h1>Belt Calculator (web)</h1>
+    <p class="muted">Port of the desktop Timing Belt Calculator. Source: provided Python/Tkinter app.</p>
+
+    <fieldset>
+        <legend>Mode</legend>
+        <label><input type="radio" name="mode" value="ratio" checked> Constrain ratio &amp; search</label>
+        <label style="margin-left:12px"><input type="radio" name="mode" value="fixed"> Fixed pulley tooth counts</label>
+    </fieldset>
+
+    <div class="row" style="align-items:center">
+        <div>
+            <label>Desired ratio (driven:driving)</label><br>
+            <input id="ratio" value="3:1" class="small">
+        </div>
+        <div>
+            <label>Driving teeth range</label><br>
+            <input id="min_driver" value="12" class="small"> to <input id="max_driver" value="80" class="small">
+        </div>
+        <div>
+            <label>Driven teeth range</label><br>
+            <input id="min_driven" value="12" class="small"> to <input id="max_driven" value="120" class="small">
+        </div>
+        <div>
+            <label>Max ratio error (%)</label><br>
+            <input id="max_ratio_err" value="5" class="small">
+        </div>
+    </div>
+
+    <fieldset>
+        <legend>Common</legend>
+        <div class="row">
+            <div><label>Desired center distance (mm)</label><br><input id="center" value="100" class="small"></div>
+            <div><label>Belt pitch (mm)</label><br><select id="pitch"><option>2.0</option><option>3.0</option><option>5.0</option></select></div>
+            <div><label>Belt width (mm)</label><br><select id="width"><option>6.0</option><option>9.0</option><option>12.0</option></select></div>
+            <div><label>Belt search range (+/- teeth)</label><br><input id="search_range" value="30" class="small"></div>
+            <div style="display:flex;align-items:center"><label style="margin-right:8px">Only suggest McMaster catalogue belts</label><input id="only_catalog" type="checkbox" checked></div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Geometry constraints</legend>
+        <div class="row">
+            <div><label>Pulley1 allowance (mm)</label><br><input id="allow1" value="0" class="small"></div>
+            <div><label>Pulley2 allowance (mm)</label><br><input id="allow2" value="0" class="small"></div>
+            <div><label>Min mesh 1</label><br><input id="minmesh1" value="6" class="small"></div>
+            <div><label>Min mesh 2</label><br><input id="minmesh2" value="6" class="small"></div>
+            <div><label>Min clearance (mm)</label><br><input id="minclear" value="0" class="small"></div>
+        </div>
+    </fieldset>
+
+    <div style="margin-top:8px">
+        <button id="calc" class="btn">Calculate</button>
+        <button id="export" class="btn" style="background:#0b6">Export CSV</button>
+    </div>
+
+    <table id="results">
+        <thead><tr>
+            <th data-col="p1">Driving T</th>
+            <th data-col="p2">Driven T</th>
+            <th data-col="ratio">Ratio</th>
+            <th data-col="ratio_err">Ratio err %</th>
+            <th data-col="belt_teeth">Belt T</th>
+            <th data-col="length">Length mm</th>
+            <th data-col="mcmaster_part">McMaster part</th>
+            <th data-col="mcmaster_url">McMaster URL</th>
+            <th data-col="center">Center mm</th>
+            <th data-col="center_err">Center err</th>
+            <th data-col="warnings">Warnings</th>
+        </tr></thead>
+        <tbody></tbody>
+    </table>
+
+    <p id="summary" class="muted"></p>
+
+</main>
+<script src="belt_calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Cassidy</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WF3FXD4YHJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WF3FXD4YHJ'); 
+    </script>
+</head>
+<body>
+    <header class="no-bar">
+        <div class="header-content">
+            <img src="resources/headshot.jpg" alt="Michael Cassidy headshot" class="headshot">
+            <div>
+                <h1>Michael Cassidy</h1>
+                <p class="subtitle">Mechatronics Engineering Student @ Queen's University</p>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#achievements">Achievements</a>
+                    <!-- <a href="#reading">Books</a> -->
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Michael Cassidy, a Mechatronics and Robotics Engineering student at Queen's University. Below are some of my projects, achievements and interests.
+
+                <a href="resources/MichaelCassidyResume.pdf" target="_blank" rel="noopener">Click here to view my resume.</a>
+            </p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project" style="margin-bottom: 48px;">
+                <h3>(WIP) 6-Axis arm with all the motors in the shoulder joint. <span style="font-weight:normal; color:#666; font-size:0.9em;">(2026)</span></h3>
+                <p> This project is currently a work in progress, I have completed the mechanical design of 4 our of the 6 axes</a>.</p>
+                <img src="resources/Arm.png" alt="Stringray Drone" style="width:100%; max-width:600px; display:block; margin:auto; border-radius:8px;">
+            </div>
+            <div class="project" style="margin-bottom: 48px;">
+                <h3>Fixed-Wing Aircraft Design<span style="font-weight:normal; color:#666; font-size:0.9em;">(2025-2026)</span></h3>
+                <p>Team captain of the Queen's Aerospace Design Team's AIAA DBF competition team. Responsible for the mechanical design and manufacturing of a carbon fibre fixed-wing aircraft. <a href="resources/QADT_Design_Report.pdf" target="_blank" rel="noopener">Here is the design report we submitted</a> for the competition. In this year's challenge we built a plane to hold mock passengers and cargo as well as deploy and tow a banner mid flight. Below are some photos of the design process, test flights and a video of our test flight.</a>.</p>
+                <div style="margin: 2em 0; text-align: center;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/vK5_JMbjJ4Y" title="QADT Test Flight" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!-- https://youtu.be/vK5_JMbjJ4Y -->
+                <div style="display: flex; gap: 16px; justify-content: center; align-items: center; width:100%; max-width:600px; margin:auto;">
+                        <img src="resources/OML1_Layup.jpg" alt="2025 Robot 1" style="height:315px; width:auto; flex:1 1 0; object-fit:contain; border-radius:8px;">
+                        <img src="resources/OML1_Structure.gif" alt="2025 Robot 2" style="height:315px; width:auto; flex:1 1 0; object-fit:contain; border-radius:8px;">
+                 </div>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 1em;">
+                    <div style="display: flex; gap: 16px; justify-content: center; align-items: center; width:100%; max-width:600px; margin: 2em auto;">
+                            <img src="resources/LandingPhoto.jpg" alt="2025 Robot 2" style="height:315px; width:auto; flex:1 1 0; object-fit:contain; border-radius:8px;">
+                            <img src="resources/BannerPhoto.jpg" alt="2025 Robot 2" style="height:315px; width:auto; flex:1 1 0; object-fit:contain; border-radius:8px;">
+                    </div>
+                 </div>
+            </div>
+            <!-- <div class="project" style="margin-bottom: 48px;">
+                <h3>Fixed-Motor 6-Axis Arm <span style="font-weight:normal; color:#666; font-size:0.9em;">(2026)</span></h3>
+                    <p>Currently working on the design of a 6-axis robotic arm. The arm has all of its motor fixed to the base so they do not move. This allows for easier wire management and relies on gearbox design to transmit the power through all the joints. The greabox is designed using a concentric shaft design to allow the power to be rotated with the arm. Additionally, the arm features cycloidal gear reductions for high torque in a small space. The CAD work was done in OnShape and is fully parametric for easy tolerancing, editing and scaling.</p>
+                    <img src="resources/Arm.png" alt="Fixed-Motor 6-Axis Arm" style="width:100%; max-width:600px; display:block; margin:auto; border-radius:8px;">
+            </div> -->
+            <div class="project" style="margin-bottom: 48px;">
+                <h3>Stringray Reconstruction Project <span style="font-weight:normal; color:#666; font-size:0.9em;">(2025)</span></h3>
+                <p>Manufactured a Stringray drone using carbon fibre layups and custom 3D-printed molds.</p>
+                <img src="resources/Stingray.png" alt="Stringray Drone" style="width:100%; max-width:600px; display:block; margin:auto; border-radius:8px;">
+            </div>
+            <div class="project" style="margin-bottom: 48px;">
+                                <h3>2025 Robot Assembly <span style="font-weight:normal; color:#666; font-size:0.9em;">(2024-2025)</span></h3>
+                                        <p>Designed and built a competitive robot for the VEXU World Championship. This robot was optimized for acceleration to grab mobile goals at the start of the match (the GIF below will provide context). To achieve this, it included several novel mechanisms including a passively unlocked potential energy accelerator which was actuated by an overcentering mechanism fired by the drive train and powered by a torsion spring. It also included a claw which passively geometrically locked and actively released to ensure other robots could not steal the goal. Finally, a power takeoff system was designed to transmit the drivetrain power to a climbing mechanism. This mechanism never made it to competition because of timeline constraints. This robot won the Build Award at the world championships with over 100 teams for the highest quality build and design. It also won the VEX AI Skills World Championship.</p>
+                                        <div style="margin: 2em 0; text-align: center;">
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/u0Kd9gK6MIQ" title="2025 Robot Assembly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 1em;">
+                                                        <div style="display: flex; gap: 16px; justify-content: center; align-items: center; width:100%; max-width:600px; margin:auto;">
+                                                            <img src="resources/2025Robot1.png" alt="2025 Robot 1" style="height:315px; width:auto; flex:1 1 0; object-fit:contain; border-radius:8px;">
+                                                            <img src="resources/2025Robot2.png" alt="2025 Robot 2" style="height:315px; width:auto; flex:1 1 0; object-fit:contain; border-radius:8px;">
+                                                        </div>
+                                </div>
+                                <img src="resources/GoalRush.gif" alt="Swerve Drive Animation" style="width:100%; max-width:600px; display:block; margin:auto; border-radius:8px;">
+            </div>
+            <div class="project" style="margin-bottom: 48px;">
+                                <h3>2024 VEXU Swerve Drive Robot <span style="font-weight:normal; color:#666; font-size:0.9em;">(2023-2024)</span></h3>
+                                <p>Developed and built a swerve drive robot for the 2024 VEXU season, featuring custom swerve modules and advanced motion control. It also featured a deployable and retractable net which used two low profile custom cascade lifts on a turreting platform to catch balls thrown from all directions.</p>
+                                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 1em;">
+                                    <img src="resources/2024Robot.png" alt="2024 VEXU Swerve Drive Robot" style="width:48%; max-width:300px; height:auto; border-radius:8px;">
+                                    <img src="resources/Swerve.gif" alt="Swerve Drive Animation" style="width:48%; max-width:300px; height:auto; border-radius:8px;">
+                                </div>
+            </div>
+            <div class="project" style="margin-bottom: 48px;">
+                <h3>Odom Board PCB Design <span style="font-weight:normal; color:#666; font-size:0.9em;">(2023)</span></h3>
+                <p>Designed a custom odometry PCB for VEX Robotics, featuring high-precision sensor integration and compact layout. It was used to fuse lidar and encoder reading to develop a Kalman Filter based localization system</p>
+                <img src="resources/OdomBoard.JPG" alt="Odom Board PCB" style="width:100%; max-width:600px; display:block; margin:auto; border-radius:8px;">
+            </div>
+            <div class="project" style="margin-bottom: 48px;">
+                <h3>VEX Tipping Point Robot <span style="font-weight:normal; color:#666; font-size:0.9em;">(2022)</span></h3>
+                <p>Designed the mechanical and programmed a robot for the VEX Tipping Point competition. This robot won the Ontario Provincial Championship and competed at the VEX Robotics World Championships. It included a thorough sensor suite which allowed for dynamic mobile goal detection and on the fly odometry recalibration for more consistent autonomous routines.</p>
+                <div style="margin: 2em 0; text-align: center;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/14WuXj3BI68" title="2025 Robot Assembly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>            
+            </div>
+            <!-- Add more projects here as needed -->
+        </section>
+        <section id="achievements">
+            <h2>Achievements & Competitions</h2>
+            <ul class="achievements-list">
+                <li><strong>Queen's Engineering Competition - Senior Design - 1st Place</strong> (2025) – Competed against upper year engineering students. Tasked to build, present and write a report for a prototype drone launcher in a 5 hour time limit. The design had to shoot a projectile with variable distance and angle. The device also needed to have a safety mechanism preventing accidental discharge.
+                    <img src="resources/QEC2025Nov15team8.jpg" alt="QEC Photo" style="width:100%; max-width:300px; display:block; margin:auto; border-radius:8px; margin-top:0.5em;">
+                </li>
+                <li><strong>Queen's University Dean's List</strong> (2022-2025) – Consistent academic achievement in engineering.</li>
+                <li><strong>VEX AI Skills World Champion</strong> (2024) – Led the team to win the world championship in AI robotics skills.<br>
+                    <img src="resources/WorldSkillsChampion.png" alt="VEX AI Skills World Champion Award" style="width:100%; max-width:300px; display:block; margin:auto; border-radius:8px; margin-top:0.5em;">
+                </li>
+                <li><strong>VEXU World Champinship Build Award</strong> (2024) – Recognized for outstanding robot design and construction.<br>
+                    <img src="resources/BuildAward.png" alt="VEXU Build Award" style="width:100%; max-width:300px; display:block; margin:auto; border-radius:8px; margin-top:0.5em;">
+                    <img src="resources/BuildAwardTeam.png" alt="VEXU Build Award" style="width:100%; max-width:300px; display:block; margin:auto; border-radius:8px; margin-top:0.5em;">
+                </li>
+                <li><strong>VEXU Canadian National Champion</strong> (2023) – Won the excellence award at Canadian Nationals, given to the best overall team at the competition.<br>
+                </li>
+                <li><strong>Schulich Leader Scholar</strong> (2022) – Awarded prestigious scholarship for STEM leadership and academic excellence. Largest STEM Scholarship in Canada. Valued at $80 000.</li>
+                <!-- Add more achievements and competitions as needed -->
+            </ul>
+        </section>
+        <!-- Reading Section -->
+        <!-- <section id="reading" style="margin-top: 40px;">
+            <h2>Relevant Books I've Read</h2>
+            <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                <div style="width: 200px; text-align: center;">
+                        <img src="resources/Gillespie.png" alt="Fundamentals of Vehicle Dynamics" style="height: 260px; width: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); object-fit: contain;">
+                    <div style="margin-top: 12px; font-weight: bold;">Fundamentals of Vehicle Dynamics</div>
+                    <div style="font-size: 0.95em; color: #555;">Thomas D. Gillespie</div>
+                </div>
+                <div style="width: 200px; text-align: center;">
+                        <img src="resources/Barnard.png" alt="Road Vehicle Aerodynamic Design" style="height: 260px; width: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); object-fit: contain;">
+                    <div style="margin-top: 12px; font-weight: bold;">Road Vehicle Aerodynamic Design</div>
+                    <div style="font-size: 0.95em; color: #555;">R H Barnard</div>
+                </div>
+            </div>
+        </section> -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:michael@shoichet.com">michael@shoichet.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/michael-as-cassidy" target="_blank">michael-as-cassidy</a></p>
+            <p>GitHub: <a href="https://github.com/Michael-Lancebotics" target="_blank">Michael-Lancebotics</a></p>
+        </section>
+    </main>
+</body>
+</html>
